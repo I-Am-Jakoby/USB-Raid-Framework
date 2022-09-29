@@ -93,8 +93,28 @@ For this example notice the label in the image below and the code above are both
 </div>
 
 
+### Executing program
 
+Once you have all of the above set up you are ready to execute this attack vector
 
+You will want to have 2 payloads ready. 
+* Your initial payload to be run once this attack has been initiated.
+  
+  I use my [ADV Recon](https://github.com/I-Am-Jakoby/hak5-submissions/tree/main/OMG/Payloads/OMG-ADV-Recon) payload to gather as much info on my target as possible
+
+* The payload you want to be run with persistence at each reboot on your targets PC (This payload will vary depending on your goal)
+
+Once this attack vector has been initiated by your target opening the fake text file link it will open the real hidden txt file in the `h` directory to avoid suspicion
+
+The shortcut will then run the `s1.bat` file that will initialize the rest of your scripts. 
+
+First your initial payload will run followed by moving your `persistance.bat` file to the start up directory. 
+
+Then your `persistence.ps1` file will be added to the AppData folder and run once now and again at each start up. 
+
+Finally the real hidden text file will replace your fake txt shortcut link and delete the rest of the files to avoid further investigation into your USB drive
+
+In a real world scenario you would also want to make the USB drive look realistic with a photo album or something else to entice your target to get in contact with you by clicking on the fake contacts.txt file
 
 ### Dependencies
 
@@ -103,7 +123,6 @@ For this example notice the label in the image below and the code above are both
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Executing program
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
